@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Exportador pedidos mercos",
+    "version": "1.2",
+    "description": "Navega automaticamente pela página de impressão de pedido do mercos e capturas os dados do pedido.",
+    "permissions": ["scripting", "activeTab"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "vite.svg"
+    }
+  }
+  
