@@ -1,0 +1,58 @@
+body {
+    padding: 10px;
+    min-width: 180px;
+}
+
+.gm-nowrap {
+    white-space: nowrap;
+}
+
+.gm-btn {
+    display: inline-flex;
+    height: 3rem;
+    min-height: 3rem;
+    flex-shrink: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border-color: transparent;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    font-size: .875rem;
+    line-height: 1em;
+    gap: .5rem;
+    font-weight: 600;
+    text-decoration-line: none;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(0, 0, .2, 1);
+    border-width: 1px;
+    animation: button-pop 0.25s ease-out;
+    transition-property: color, background-color, border-color, opacity, box-shadow, transform;
+    color: white;
+    background-color: #ff9b08;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / .05);
+    outline-color: #ff9b08;
+}
+
+/* Botão primário laranja */
+.gm-btn-primary {
+    color: white;
+    background-color: #ff9b08;
+    border-color: #ff9b08;
+}
+
+.gm-btn-primary:hover {
+    background-color: #e88a07; /* Laranja mais escuro no hover */
+    border-color: #e88a07;
+}
+
+.gm-btn-primary:active {
+    background-color: #d07906; /* Laranja ainda mais escuro quando pressionado */
+    border-color: #d07906;
+}
