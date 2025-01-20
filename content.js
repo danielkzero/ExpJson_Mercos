@@ -25,7 +25,7 @@
 
             if (boldText) {
               objetoAlvo[boldText.replace(":", "").trim()] =
-                content || "Não informado";
+                content || null;
             }
           });
         });
@@ -183,6 +183,8 @@
             detalhes: jsonData.item,
           };
 
+          console.log(payload);
+          
           // Fetch para enviar o JSON à API
           fetch("http://localhost:8083/api/v1/pedidos", {
             method: "POST",
@@ -192,13 +194,14 @@
             body: JSON.stringify(payload),
           })
             .then((response) => {
+              console.log(response);
               if (!response.ok) {
                 throw new Error(`Erro: ${response.statusText}`);
               }
               return response.json();
             })
             .then((data) => {
-              //console.log("Resposta da API:", data['status']);
+              console.log("Resposta da API:", data['status']);
               alert("Resposta da API: " + data["status"]);
             })
             .catch((error) => {
